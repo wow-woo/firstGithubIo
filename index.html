@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>project</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./clock.js" defer type="module"></script>
+    <script src="./app.js" defer type="module"></script>
   </head>
   <body>
-    <aside class="clock-banner">
-      <h3>Weather</h3>
-      <div class="display-weather"></div>
+    <aside class="secretary">
+      <section class="display-clock">
+        <h3>Time</h3>
+        <div class="clock">
+          <div class="clock-center"></div>
+        </div>
+        <div>
+          <span class="year"></span>년 <span class="month"></span>월
+          <span class="date"></span>일 <span class="hours"></span>시
+          <span class="minutes"></span>분 <span class="seconds"></span>초
+        </div>
+      </section>
 
-      <h3>Location</h3>
-      <div class="display-location"></div>
+      <section class="display-location">
+        <h3>Location</h3>
+        <div class="location-detail"></div>
+      </section>
 
-      <h3>Time</h3>
-      <div class="display-clock">
-        <div class="clock-center"></div>
-      </div>
-
-      <div>
-        <span class="year"></span>년 <span class="month"></span>월
-        <span class="date"></span>일 <span class="hours"></span>시
-        <span class="minutes"></span>분 <span class="seconds"></span>초
-      </div>
+      <section class="display-weather">
+        <h3>Weather</h3>
+      </section>
     </aside>
 
     <main>
@@ -38,13 +42,16 @@
           <label for="inp_things">Things to do </label>
           <input type="text" id="inp_things" required />
         </section>
-        <section class="to_do_section">
-          <h5>Process</h5>
-          <div class="to_do_list"></div>
-        </section>
-        <section class="be_done_section">
-          <h5>Complete</h5>
-          <div class="be_done_list"></div>
+
+        <section class="form-lists">
+          <div class="to_do_section">
+            <h5>Process</h5>
+            <div class="to_do_list"></div>
+          </div>
+          <div class="be_done_section">
+            <h5>Complete</h5>
+            <div class="be_done_list"></div>
+          </div>
         </section>
       </form>
     </main>

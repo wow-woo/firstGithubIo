@@ -10,33 +10,59 @@ body {
 }
 
 main {
+  padding: 2em 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
-}
 
-aside.clock-banner {
+  background-color: bisque;
+}
+main #name_form > label {
+  font-size: 3rem;
+  color: #fff;
+}
+main #name_form > input {
+  display: block;
+  margin: 0 auto;
+}
+main #name_form > span {
+  font-size: 2rem;
+  text-align: center;
+}
+aside.secretary {
+  color: #fff;
   width: 300px;
   float: right;
   height: 100%;
-  border: 1px solid #000;
-  padding: 2em;
+  padding: 0 2em;
+
+  background-color: salmon;
+}
+aside.secretary > section {
+  padding: 2em 0;
 }
 .display-clock {
+  text-align: center;
+}
+.display-clock > h3 {
+  padding: 1em 0;
+  text-align-last: left;
+}
+.clock {
+  margin: 1.2em auto;
   position: relative;
 
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  border: 5px solid #000;
 
   background: url("./clock-bg.jpg");
   background-size: contain;
   background-position: 50%;
 }
-.display-clock .clock-center {
+.clock .clock-center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,7 +74,7 @@ aside.clock-banner {
   height: 19px;
   border-radius: 50%;
 }
-.display-clock:before {
+.clock:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -63,7 +89,7 @@ aside.clock-banner {
   height: 30%;
   background-color: #382;
 }
-.display-clock:after {
+.clock:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -76,4 +102,88 @@ aside.clock-banner {
   width: 5px;
   height: 45%;
   background-color: #000;
+}
+
+.display-location > div {
+  text-align: center;
+}
+
+.display-weather > img {
+  display: block;
+  margin: 0 auto;
+}
+.display-weather > div {
+  text-align: center;
+}
+
+.to_do_section {
+  color: #fff;
+  font-size: 3rem;
+}
+.be_done_section {
+  color: #fff;
+  font-size: 3rem;
+}
+#to_do_form {
+  margin-top: 5em;
+  width: 100%;
+  text-align: center;
+}
+#to_do_form > .inp_section > label {
+  display: block;
+  font-size: 2rem;
+}
+#to_do_form > .inp_section > input {
+  margin-top: 1em;
+  padding: 0.8em;
+  font-size: 1rem;
+}
+
+#to_do_form > .form-lists {
+  display: flex;
+}
+#to_do_form > .form-lists > div {
+  margin-top: 1em;
+
+  width: 50%;
+}
+.to_do_list {
+  color: black;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align-last: left;
+  padding: 0.5em 3em;
+}
+.to_do_list > div {
+  padding: 0 1em;
+  overflow: hidden;
+}
+.to_do_list > div > .content-item {
+  float: left;
+}
+.to_do_list > div > .btn-item {
+  float: right;
+}
+.to_do_list > div > .btn-item > span {
+  padding: 0 0.2em;
+}
+.be_done_list {
+  color: dodgerblue;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align-last: left;
+  padding: 0.5em 3em;
+}
+.be_done_list > div {
+  padding: 0 1em;
+  overflow: hidden;
+}
+.be_done_list > div > .content-item {
+  float: left;
+}
+.be_done_list > div > .btn-item {
+  float: right;
+}
+.be_done_list > div > .btn-item > span {
+  padding: 0 0.2em;
 }

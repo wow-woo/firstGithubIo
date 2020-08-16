@@ -1,4 +1,3 @@
-const clockBanner = document.querySelector(".clock-banner");
 const dateYear = document.querySelector(".year");
 const dateMonth = document.querySelector(".month");
 const dateDate = document.querySelector(".date");
