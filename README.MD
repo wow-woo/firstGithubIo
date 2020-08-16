@@ -13,6 +13,6 @@
 
 ### Room to improve
 
-- [] update content of item in list
-- [] update window title with user name
-- [] operate clock by degree
+- [ ] update content of item in list
+- [ ] update window title with user name
+- [x] operate clock by degree

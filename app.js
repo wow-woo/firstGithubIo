@@ -6,6 +6,8 @@ const locationDetail = document.querySelector(".location-detail");
 const main = document.querySelector("main");
 const bg_uri = "https://source.unsplash.com/1600x900/?beach,bikini";
 
+const clock = document.querySelector(".clock");
+
 let txt_state = {
   process: "🥇",
   complete: "🧩",
@@ -210,6 +212,21 @@ const getCurrentTime = (e) => {
     dateHours.textContent = hours;
     dateMinutes.textContent = minutes;
     dateSeconds.textContent = seconds;
+
+    let long_val = seconds * 6 + 180;
+    let short_val = hours * 30 + 180;
+
+    document.documentElement.style.setProperty(
+      "--sword-long",
+      `${long_val}deg`
+    );
+    console.log(
+      document.documentElement.style.getPropertyValue("--sword-long")
+    );
+    document.documentElement.style.setProperty(
+      "--sword-short",
+      `${short_val}deg`
+    );
   }
 
   requestAnimationFrame(() => requestAnimationFrame(getCurrentTime));
