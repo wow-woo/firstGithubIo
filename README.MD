@@ -15,4 +15,5 @@
 
 - [ ] update content of item in list
 - [ ] update window title with user name
+- [ ] button to reset user name
 - [x] operate clock by degree
