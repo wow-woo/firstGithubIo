@@ -244,7 +244,7 @@ const checkName = (e) => {
 };
 
 const getWeather = async (location_info) => {
-  const address = `http://api.openweathermap.org/data/2.5/weather?lat=${
+  const address = `https://api.openweathermap.org/data/2.5/weather?lat=${
     location_info.latitude
   }&lon=${location_info.longitude}&appid=${"b9dd8aa3b4163a97b55a677d647a75b6"}`;
 
@@ -260,7 +260,7 @@ const getWeather = async (location_info) => {
     console.log(error);
   }
 
-  const address_ico_weather = `http://openweathermap.org/img/wn/${weather_info.ico}@2x.png`;
+  const address_ico_weather = `https://openweathermap.org/img/wn/${weather_info.ico}@2x.png`;
   const img = document.createElement("img");
   const div = document.createElement("div");
 
