@@ -313,9 +313,13 @@ const getLocation = () => {
 
 //random background image
 const paintBackground = async (e) => {
-  const res = await fetch(bg_uri);
+  try {
+    const res = await fetch(bg_uri);
 
-  main.style.backgroundImage = `url(${res.url})`;
+    main.style.backgroundImage = `url(${res.url})`;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const loadHandler = (e) => {
