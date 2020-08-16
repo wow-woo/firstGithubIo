@@ -5,7 +5,6 @@ const weatherSection = document.querySelector(".display-weather");
 const locationDetail = document.querySelector(".location-detail");
 const main = document.querySelector("main");
 const bg_uri = "https://source.unsplash.com/1600x900/?beach,bikini";
-
 const clock = document.querySelector(".clock");
 
 let txt_state = {
@@ -219,9 +218,6 @@ const getCurrentTime = (e) => {
     document.documentElement.style.setProperty(
       "--sword-long",
       `${long_val}deg`
-    );
-    console.log(
-      document.documentElement.style.getPropertyValue("--sword-long")
     );
     document.documentElement.style.setProperty(
       "--sword-short",
