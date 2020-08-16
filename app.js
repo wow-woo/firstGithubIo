@@ -243,17 +243,21 @@ const nameHandler = (e) => {
   const span = document.createElement("span");
   label_name.textContent = "Hi!";
   span.textContent = yourName;
+  span.classList.add("user-name");
+
   name_form.appendChild(span);
 };
 
 const checkName = (e) => {
   const name = window.localStorage.getItem("yourName");
+
   if (name) {
     label_name.textContent = "Hi!";
 
     inp_name.remove();
     const span = document.createElement("span");
     span.textContent = name;
+    span.classList.add("user-name");
     name_form.appendChild(span);
   } else {
     name_form.addEventListener("submit", nameHandler);
