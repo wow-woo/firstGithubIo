@@ -3,6 +3,8 @@ const label_name = document.querySelector("#name_form > label");
 const inp_name = document.querySelector("#inp_name");
 const weatherSection = document.querySelector(".display-weather");
 const locationDetail = document.querySelector(".location-detail");
+const main = document.querySelector("main");
+const bg_uri = "https://source.unsplash.com/1600x900/?beach,bikini";
 
 let txt_state = {
   process: "🥇",
@@ -309,11 +311,19 @@ const getLocation = () => {
   );
 };
 
+//random background image
+const paintBackground = async (e) => {
+  const res = await fetch(bg_uri);
+
+  main.style.backgroundImage = `url(${res.url})`;
+};
+
 const loadHandler = (e) => {
+  paintBackground();
   getLocation();
   checkName();
   getCurrentTime();
   configList();
 };
 
-window.addEventListener("DOMContentLoaded", loadHandler);
+window.addEventListener("load", loadHandler);

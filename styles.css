@@ -18,6 +18,7 @@ main {
   justify-content: stretch;
 
   background-color: bisque;
+  background-blend-mode: soft-light;
 }
 main #name_form > label {
   font-size: 3rem;
@@ -25,7 +26,9 @@ main #name_form > label {
 }
 main #name_form > input {
   display: block;
-  margin: 0 auto;
+  margin: 2em auto 0;
+  padding: 1em;
+  text-transform: capitalize;
 }
 main #name_form > span {
   font-size: 2rem;
