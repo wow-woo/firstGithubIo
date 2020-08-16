@@ -179,6 +179,8 @@ aside.secretary > section {
   float: right;
 }
 .to_do_list > div > .btn-item > span {
+  user-select: none;
+  cursor: pointer;
   padding: 0 0.2em;
 }
 .be_done_list {
@@ -199,5 +201,7 @@ aside.secretary > section {
   float: right;
 }
 .be_done_list > div > .btn-item > span {
+  user-select: none;
+  cursor: pointer;
   padding: 0 0.2em;
 }
